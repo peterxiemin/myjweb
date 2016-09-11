@@ -3,10 +3,10 @@
 - controler
 - actions
 - models
---  dao
-  service
-    page
-    data
-library
+-  dao
+-  service
+-    page
+-    data
+-library
 
 ##二、增加jdbctemplate封装，可以支持多数据库多表的查询
