@@ -29,7 +29,7 @@ public class JdbcTemplateBase {
 
     protected void setJdbcTemplate(String dataSourceName) {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("jdbc.xml");
+                new ClassPathXmlApplicationContext("jdbc-context.xml");
         this.dataSource = (DataSource)context.getBean(dataSourceName);
         this.jdbcTemplate = new JdbcTemplate(this.dataSource);
     }

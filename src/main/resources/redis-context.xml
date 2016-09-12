@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!--<property name="maxTotal" value="10"></property>-->
+        <!--<property name="maxIdle" value="10"></property>-->
+        <!--<property name="maxWaitMillis" value="1500"></property>-->
+        <!--<property name="minEvictableIdleTimeMillis" value="300000"></property>-->
+        <!--<property name="numTestsPerEvictionRun" value="3"></property>-->
+        <!--<property name="timeBetweenEvictionRunsMillis" value="60000"></property>-->
+        <!--<property name="testOnBorrow" value="true"></property>-->
+        <!--<property name="testOnReturn" value="true"></property>-->
+        <!--<property name="testWhileIdle" value="true"></property>-->
+    </bean>
+
+    <bean id="jedisConnectionFactory"
+          class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+          destroy-method="destroy">
+        <property name="hostName" value="localhost" />
+        <property name="port" value="6379" />
+        <property name="timeout" value="1500" />
+        <property name="database" value="0" />
+        <property name="password" value="" />
+        <property name="usePool" value="false" />
+        <property name="poolConfig" ref="jedisPoolConfig" />
+    </bean>
+</beans>
