@@ -9,4 +9,6 @@
 - --------   data
 - library
 
-##二、增加jdbctemplate封装，可以支持多数据库多表的查询
+##二、存储层方面
+增加jdbctemplate封装，可以支持多个mysql操作
+增加redistemplate封装，支持多redis操作
