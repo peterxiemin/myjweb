@@ -3,10 +3,6 @@ package models.dao;
 import library.db.JdbcTemplateBase;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
-import java.util.Currency;
-import java.util.List;
-import java.util.Map;
-
 /**
  * Created by peter on 2016/9/11.
  */

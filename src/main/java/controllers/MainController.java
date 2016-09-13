@@ -1,6 +1,7 @@
 package controllers;
 
 import actions.IndexAction;
+import actions.RedisTestAction;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,5 +16,10 @@ public class MainController {
     @ResponseBody
     public String Index() {
         return new IndexAction().execute();
+    }
+    @RequestMapping(value = "/redistest", method = RequestMethod.GET)
+    @ResponseBody
+    public String RedisTest() {
+        return new RedisTestAction().execute();
     }
 }
