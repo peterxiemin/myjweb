@@ -7,10 +7,10 @@ import library.cache.RedisTemplateBase;
  */
 public class SingletonRedisDao extends RedisTemplateBase {
     public static final String redisConnectionFactoryName = "jedisConnectionFactory";
-    public static SingletonRedisDao instance;
+    private static SingletonRedisDao instance = null;
     public static synchronized SingletonRedisDao getInstance() {
         if (instance == null) {
-            return new SingletonRedisDao();
+            instance = new SingletonRedisDao();
         }
         return instance;
     }

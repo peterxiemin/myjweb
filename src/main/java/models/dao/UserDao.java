@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 /**
  * Created by peter on 2016/9/11.
+ * 这种方式会造成每次使用此类，就需要重新建立连接
  */
 public class UserDao extends JdbcTemplateBase{
     public static final String tableName = "user";
