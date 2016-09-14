@@ -2,8 +2,6 @@ package models.dao;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by xiemin02 on 2016/9/14.
  */

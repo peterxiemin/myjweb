@@ -1,6 +1,5 @@
 package actions;
 
-import models.service.data.IndexData;
 import models.service.page.IndexPage;
 
 /**
