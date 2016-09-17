@@ -1,7 +1,6 @@
 package models.service.page;
 
 import models.dao.User;
-import models.service.data.IndexData;
 import models.service.data.MysqlTestData;
 
 /**
